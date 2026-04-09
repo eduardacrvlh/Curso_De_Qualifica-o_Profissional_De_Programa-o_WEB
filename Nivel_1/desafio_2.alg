@@ -37,5 +37,6 @@ escreval ("INFORME O VALOR DA BOLSA AUXÍLIO:")
 escreval ("VOCÊ POSSUI ESPERIÊNCIA PRÉVIA?")
 //leia(experiencia)
 escreval("")
+escreva("O profissional ",nomeC," de idade ",idade," e E-mail ",email,", recebe uma Bolsa Auxílio de ",bolsaA," e registrou ",experiencia," como experiência.")
 
 fimalgoritmo
