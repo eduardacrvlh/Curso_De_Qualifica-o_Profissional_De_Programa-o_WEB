@@ -6,8 +6,10 @@ algoritmo "Sala de servidores"
 // Data atual  : 09/04/2026
 
 var
-largura:caractere
-comprimento:caractere
+largura:inteiro
+comprimento:inteiro
+produto1:inteiro
+produto2:inteiro
 
 
 inicio
@@ -20,6 +22,10 @@ escreval("Informe a largura da sala-em metros:")
 leia(largura)
 escreval("Digite o comprimento da sala-em metros:")
 leia(comprimento)
+produto1 <- largura * comprimento
+escreval("Área=",produto1)
+produto2 <- 2 * (largura+comprimento)
+escreval("Perímetro=",produto2)
 
 
 fimalgoritmo
