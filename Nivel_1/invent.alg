@@ -10,9 +10,9 @@ inicio
     escreval("__________")
     escreval("Insira o nome do primeiro item:")
     leia(item)
-    escreval("Item 1 registrado com sucesso!")
-
-
-
-
+    escreval("Primeiro item registrado com sucesso!")
+    escreval("Insira o nome do segundo item:")
+    leia(item)
+    escreva("Item 1 descartado e item 2 registrado->"+item)
+    item <- "vazio"
 fimalgoritmo
