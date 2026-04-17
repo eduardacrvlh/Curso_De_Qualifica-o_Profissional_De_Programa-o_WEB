@@ -1,0 +1,103 @@
+<!--Declara que o ficheiro é um documento html-->
+<!DOCTYPE html>
+
+<!--Inicia o código html e define o idioma da página-->
+<html lang="pt-BR">
+
+<!--A tag <head> guarda as configurações invisíveis da página (metadados, título da aba, autor, etc)-->
+    <head>
+        <!--Título que aparecerá na aba-->
+        <title>Teste para programadores</title>
+
+        <!--Define a codifiação de caracteres do idioma do teclado-->
+        <meta charset="UTF-8">
+
+        <!--Faz com que a página seja adaptável aos dispositivos e telas mais usuais-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <!--Descrição do site e suas características resumidas-->
+        <meta name="Description"content="Teste para programadores">
+
+        <meta name="author" content="Eduarda Carvalho">
+
+        <meta name="keywords"content="aula, web ">
+        <!--Fechamento da tag </head> obrigatório-->
+    </head>
+
+        <!--A tag <body> é o corpo da página. Tudo que será acrescentado ser´´a visível para o usuário-->
+        <body>
+
+        <!--Cabeçalho da página-->
+        <header>
+
+            <!--Como boas práticas no desenvolvimento de sites, recomenda-se apenas um h1 por aba-->
+            <h1>Teste para programadores</h1>
+
+            <!--Parágrafo-->
+            <p>Teste seus conhecimentos em programação e veja se está preparado</p>
+            
+        
+        </header>
+
+        <!--Conteúdo da página-->
+        <main>
+
+            <!--Delimita de forma organizada partes específicas do site-->
+            <section>
+                <h2>Sobre esse teste</h2>
+                <p>Esse teste foi desenvolvido para <b>testar seus conhecimentos</b> <strong>em programação</strong>, como: <br><u>linguagem de programação, lógica de programação, conceitos  básicos, entre outros.</u> <br>Você encontrará encontrará diferentes tipos de perguntas, como: <br>múltipla escolha, texto, datas,imagens, etc. Você tambem poderá encontrar alguns acrônimos como <abbr title="Hipertxt Markup Language (Linguagem de Marcação Interxtexto)"> HTML </abbr> e <abbr title= "Cascading Style Sheets (Folhas de Estilo em Cascata)">css</abbr>, <br>que são comumente usados em questões relacionadas em <em>Desenvolvimento Web</em>. <br><b><i>Boa sorte!</i></b></p>
+                
+                <!--Propriedades de parágrafo (texto)
+                <strong> dá forte importância ao texto
+                <em> dá enfase no texto escolhido
+                <br> quebra de linha
+                <abbr> cria uma abreviação explicativa ao passar o mouse
+                <b> negrito
+                <i> itálico
+                <u> sublinhado-->
+                
+
+            </section>
+
+            <!--INÍCIO DO TESTE-->
+            <section>
+
+                <h2>Questão 1: Qual linguagem é usada para estruturar páginas na WEB?</h2>
+
+                <form>
+
+                    <!--A linha <input representa o link com a lógica a ser implementada no backend-->
+                    
+                    <input type="radio" value="Python" id="q1a" name="pergunta1">
+                    <!--O nome descrito na tag <name não é visível para o usuário, sendo então necessário acrescentar uma linha <label-->
+                    <label for="q1a">Python</label>
+
+                    <br><input type="radio" value="JavaScript" id="q1b" name="pergunta1">
+                    <label for="q1b">JavaScript</label>
+
+                    <br><input type="radio" value="C++" id="q1c" name="pergunta1">
+                    <label for="q1c">C++</label>
+
+                    <br><input type="radio" value="HTML" id="q1d" name="pergunta1">
+                    <label for="q1d">HTML</label>
+
+                </form>
+
+                <!--A tag <form é uma das mais importantes, pois ela trabalha como envelope e define onde e quando as informações inseridas pelos usuários serão encapsuladas-->
+
+            </section>
+
+        </main>
+
+        <!--Rodapé da página-->
+        <footer>
+
+        </footer>
+
+        <!--Fecamento da tag </body obrigatório-->
+        </body>
+
+    <!--Fechamento OBRIGATÓRIO da página-->
+    </head>
+
+</html>
