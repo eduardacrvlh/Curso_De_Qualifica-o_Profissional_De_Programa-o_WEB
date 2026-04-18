@@ -28,7 +28,7 @@
         <body>
 
         <!--Cabeçalho da página-->
-        <header>
+        <header><hr><hr>
 
             <!--Como boas práticas no desenvolvimento de sites, recomenda-se apenas um h1 por aba-->
             <h1>Teste para programadores</h1>
@@ -37,7 +37,7 @@
             <p>Teste seus conhecimentos em programação e veja se está preparado</p>
             
         
-        </header>
+        </header><hr><hr>
 
         <!--Conteúdo da página-->
         <main>
@@ -45,7 +45,7 @@
             <!--Delimita de forma organizada partes específicas do site-->
             <section>
                 <h2>Sobre esse teste</h2>
-                <p>Esse teste foi desenvolvido para <b>testar seus conhecimentos</b> <strong>em programação</strong>, como: <br><u>linguagem de programação, lógica de programação, conceitos  básicos, entre outros.</u> <br>Você encontrará encontrará diferentes tipos de perguntas, como: <br>múltipla escolha, texto, datas,imagens, etc. Você tambem poderá encontrar alguns acrônimos como <abbr title="Hipertxt Markup Language (Linguagem de Marcação Interxtexto)"> HTML </abbr> e <abbr title= "Cascading Style Sheets (Folhas de Estilo em Cascata)">css</abbr>, <br>que são comumente usados em questões relacionadas em <em>Desenvolvimento Web</em>. <br><b><i>Boa sorte!</i></b></p>
+                <p>Esse teste foi desenvolvido para <b>testar seus conhecimentos</b> <strong>em programação</strong>, como: <br><u>linguagem de programação, lógica de programação, conceitos  básicos, entre outros.</u> <br>Você encontrará encontrará diferentes tipos de perguntas, como: <br>múltipla escolha, texto, datas,imagens, etc. Você tambem poderá encontrar alguns acrônimos como <abbr title="Hipertxt Markup Language (Linguagem de Marcação Interxtexto)"> HTML </abbr> e <abbr title= "Cascading Style Sheets (Folhas de Estilo em Cascata)">css</abbr>, <br>que são comumente usados em questões relacionadas em <em>Desenvolvimento Web</em>. <br><b><i>Boa sorte!</i></b><hr></p>
                 
                 <!--Propriedades de parágrafo (texto)
                 <strong> dá forte importância ao texto
@@ -54,10 +54,14 @@
                 <abbr> cria uma abreviação explicativa ao passar o mouse
                 <b> negrito
                 <i> itálico
-                <u> sublinhado-->
+                <u> sublinhado
+                <hr> linha
+                <small> diminui ligeiramente
+                <sup> cria o efeito de expoente no texto-->
+               
                 
 
-            </section>
+            </section><hr>
 
             <!--INÍCIO DO TESTE-->
             <section>
@@ -85,7 +89,137 @@
 
                 <!--A tag <form é uma das mais importantes, pois ela trabalha como envelope e define onde e quando as informações inseridas pelos usuários serão encapsuladas-->
 
-            </section>
+
+            </section><hr>
+
+            <!--Questão 2-->
+            <section>
+
+            <h2>Questão 2: Na URL://WWW.google.com, o trecho "google.com" é conhecido como:</h2>
+
+            <form>
+
+            <label for="pergunta2">Escreva a resposta correta:</label><br>
+
+            <!--Esse input significa o leia do visualg, enquanto o value é o dado inserido pelo usuário-->
+            <input type="text" id="q2" name="pergunta2" placeholder="Digite sua resposta aqui...">
+
+            </form>
+
+            </section><hr>
+
+            <!--Questão 3-->
+            <section>
+            
+            <h3>Questão 3: Escreva um exemplo de senha segura:</h3>
+
+            <form>
+
+            <label for="pergunta3">Digite sua resposta aqui:</label><br>
+
+             <input type="password" id="q3" name="pergunta3" placeholder="Digite a senha aqui...">
+
+            </form>
+
+            </section><hr>
+
+            <!--Questão 4-->
+            <section>
+            
+            <h4>Questão 4: Em que ano o HTML lançou sua primeira versão?</h4>
+
+            <form>
+
+            <label for="pergunta4">Digite sua resposta aqui:</label><br>
+
+             <input type="date" id="q4" name="pergunta4" placeholder="Digite a data aqui...">
+
+            </form>
+
+            </section><hr>
+
+            <!--Questão 5-->
+            <section>
+
+                <h5>Questão 5: Quais das tecnologias são consideradas linguagens de programação?</h2>
+
+                <form>
+
+                    
+                    <input type="checkbox" value="Python" id="q1a" name="pergunta5">
+                    <label for="q5a">Python</label>
+
+                    <br><input type="checkbox" value="JavaScript" id="q1b" name="pergunta5">
+                    <label for="q5b">JavaScript</label>
+
+                    <br><input type="checkbox" value="C++" id="q1c" name="pergunta5">
+                    <label for="q5c">C++</label>
+
+                    <br><input type="checkbox" value="HTML" id="q1d" name="pergunta5">
+                    <label for="q5d">HTML</label>
+
+                </form>
+
+                
+            </section><hr>
+
+            <!--Questão 6-->
+            <section>
+            
+            <h6>Questão 6: Faça o upload de um arquivo que conteha um código HTML:</h6>
+
+            <form>
+
+             <input type="file" id="q6" name="pergunta6" placeholder="Digite o arquivo aqui...">
+
+            </form>
+
+            </section><hr>
+
+            <!--Questão 7-->
+            <section>
+            
+            <h7>Questão 7: Selecione o atributo do INPUT que define o seu tipo:</h7>
+
+            <form>
+
+                <select>id="q7" name="pergunta7"
+                   <option value="id">id</option>
+                   <option value="class">class</option>
+                   <option value="type">type</option>
+                   <option value="name">name</option>
+                   <option value="placeholder">placeholder</option>
+                </select>
+            
+            </form>
+
+            </section><hr>
+
+            <!--Questão 8-->
+            <section>
+            
+            <h8>Questão 8: Qual linguagem de programação é representada pelo logotipo abaixo?</h8>
+
+            <figure>
+
+                <!--Revisar, pois devido ao erro do computador do laboratório, torna-se inviável a execução do site e a inserção de imagens.-->
+                  <img src="c:\Users\LAB-10\Downloads\images.png" alt="Logotipo">
+
+            </figure>
+
+            <form>
+
+                <select>id="q8" name="pergunta8"
+                   <option value="Java">Java</option>
+                   <option value="c++">c++</option>
+                   <option value="HTML">HTML</option>
+                   <option value="Python">Python</option>
+                </select>
+            
+            </form>
+
+            </section><hr>
+            
 
         </main>
 
