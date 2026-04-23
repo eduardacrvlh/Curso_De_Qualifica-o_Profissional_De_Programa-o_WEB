@@ -57,7 +57,11 @@
                 <u> sublinhado
                 <hr> linha
                 <small> diminui ligeiramente
-                <sup> cria o efeito de expoente no texto-->
+                <sup> cria o efeito de expoente no texto
+                <tr> será habilitada a edição da linha da coluna
+                <ul> habilita lista
+                <ol> a lista será numeral
+                <li> lista de pontos-->
                
                 
 
@@ -219,7 +223,90 @@
             </form>
 
             </section><hr>
+
+            <section>
             
+            <h2>Tabela de pontuação</h2>
+             <tbody>
+              <table border="1">
+               <thead>
+                <tr>
+                   <td>0 - 2</td><td>Não foi bem!Tente novamente.</td>
+                </tr>
+
+               </thead>
+
+                <tr>
+                   <td>0 - 2</td><td>Não foi bem!Tente novamente.</td>
+                </tr>
+                <tr>
+                   <td>3 - 4</td><td>É preciso melhorar!</td>
+                </tr>
+                <tr>
+                   <td>5 - 6</td><td>Regular, porém não o suficiente.</td>
+                </tr>
+                <tr>
+                   <td>7 - 8</td><td>Muito bom! Você está aprendendo.</td>
+                </tr>
+                <tr>
+                   <td>9 - 10</td><td>Parabéns, programador!</td>
+                </tr>
+
+            <tfoot> <!--Rodapé da tabela-->
+                <td colspan="2">Boa sorte na próxima!</td>
+            </tfoot>
+
+              </table>
+             </tbody>
+
+            </section><hr>
+
+            <section>
+                <details>
+                    <summary>Clique para visualizar a resposta</summary>
+            <!--Lista de respostas-->
+                <h2>Verifique suas respostas</h2>
+            <!--É preciso informar ao navegador a intenção através da tag <ul>-->
+                <ul>
+                    <ol>
+                      <li>HTML</li>
+                      <li>Domínio</li>
+                      <li>EDcS_3004!</li>
+                      <li>1991</li>
+                      <li>java, Python, JavaScript</li>
+                      <li>*.html</li>
+                      <li>type</li>
+                      <li>Java</li>
+                    </ol>
+                </ul>
+                </details>
+            </section>
+            
+            <section>
+            <!--Formulário de feedback-->
+    <form>
+      <fieldset>
+      <legend>Informações de cadastro</legend>
+      
+      <!-- Campo Nome -->
+      <div class="form-group">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" placeholder="Digite seu nome">
+      </div>
+      
+      <!-- Campo Email -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+      </div><br>
+        <label for="Comentário">Seu Comentário:</label>
+        <textarea id="Comentário" name="Comentário" placeholder="Insira seu comentário"></textarea>
+      </fieldset>
+    </form>
+</section>
+
+    
+
 
         </main>
 
