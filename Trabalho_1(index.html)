@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Interativo</title>
+
+  <!-- Ligação com o CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="quiz-box">
+  <h2 id="pergunta">Pergunta aqui</h2>
+
+  <button onclick="responder(0)" id="btn0"></button>
+  <button onclick="responder(1)" id="btn1"></button>
+  <button onclick="responder(2)" id="btn2"></button>
+  <button onclick="responder(3)" id="btn3"></button>
+
+  <h3 id="resultado"></h3>
+</div>
+
+<script>
+let perguntas = [
+  {
+    pergunta: "Qual país tem a maior floresta tropical do mundo?",
+    opcoes: ["Brasil", "Estados Unidos", "China", "Canadá"],
+    correta: 0
+  },
+  {
+    pergunta: "Qual planeta é conhecido como planeta vermelho?",
+    opcoes: ["Terra", "Marte", "Júpiter", "Vênus"],
+    correta: 1
+  },
+  {
+    pergunta: "Quem escreveu 'Dom Casmurro'?",
+    opcoes: ["Machado de Assis", "Clarice Lispector", "Drummond", "Graciliano Ramos"],
+    correta: 0
+  },
+  {
+    pergunta: "Qual é a fórmula da velocidade média?",
+    opcoes: ["v = d/t", "v = t/d", "v = d × t", "v = d + t"],
+    correta: 0
+  }
+];
+
+let atual = 0;
+let acertos = 0;
+let erros = 0;
+
+function carregarPergunta() {
+  if (atual >= perguntas.length) {
+    document.getElementById("pergunta").innerText = "Quiz finalizado!";
+    document.getElementById("resultado").innerText =
+      "Acertos: " + acertos + " | Erros: " + erros;
+
+    document.getElementById("btn0").style.display = "none";
+    document.getElementById("btn1").style.display = "none";
+    document.getElementById("btn2").style.display = "none";
+    document.getElementById("btn3").style.display = "none";
+    return;
+  }
+
+  let p = perguntas[atual];
+  document.getElementById("pergunta").innerText = p.pergunta;
+
+  for (let i = 0; i < 4; i++) {
+    document.getElementById("btn" + i).innerText = p.opcoes[i];
+  }
+}
+
+function responder(opcao) {
+  if (opcao === perguntas[atual].correta) {
+    acertos++;
+  } else {
+    erros++;
+  }
+
+  atual++;
+  carregarPergunta();
+}
+
+carregarPergunta();
+</script>
+
+</body>
+</html>
