@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Identica à Foto -->
+        <aside class="sidebar">
+            <h1 class="portal-title">Portal do Aluno</h1>
+            <div class="logo-a">A</div>
+            <nav class="nav-menu">
+                <a href="#" id="btn-inicio" onclick="navegar('inicio')">🏠 Início</a>
+                <a href="#" id="btn-cadastrar" class="active" onclick="navegar('cadastrar')">➕ Cadastrar Produtos</a>
+                <a href="#" id="btn-produtos" onclick="navegar('produtos')">📂 Meus Produtos</a>
+                <a href="#" id="btn-precos" onclick="navegar('precos')">🏷️ Preços</a>
+                <a href="#" id="btn-config" onclick="navegar('config')">⚙️ Configurações</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Header com Busca e Perfil -->
+            <header class="top-header">
+                <div class="search-bar">
+                    🔍 <input type="text" placeholder="Pesquisar...">
+                </div>
+                <div class="header-right">
+                    <div class="msg-icon">✉️ <span class="badge">3</span></div>
+                    <div class="user-profile" onclick="navegar('config')">
+                        <div class="avatar" id="user-photo">👤</div>
+                        <span id="user-name-top">Ana Silva</span> ▾
+                    </div>
+                </div>
+            </header>
+
+            <!-- Área de Conteúdo Dinâmico -->
+            <div id="dynamic-view">
+                <!-- O conteúdo de 'Cadastrar' carrega por padrão -->
+            </div>
+
+            <footer class="main-footer">
+                © 2026 Curso de Desenvolvimento WEB
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
