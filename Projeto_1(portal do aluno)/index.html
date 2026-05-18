@@ -15,6 +15,7 @@
                 <a href="#" id="btn-cadastrar" onclick="navegar('cadastrar')">➕ Cadastrar Produtos</a>
                 <a href="#" id="btn-produtos" onclick="navegar('produtos')">📂 Meus Produtos</a>
                 <a href="#" id="btn-precos" onclick="navegar('precos')">🏷️ Tabela de Preços</a>
+                <a href="#" id="btn-mensagens" onclick="navegar('mensagens')">💬 Mensagens</a>
                 <a href="#" id="btn-config" onclick="navegar('config')">⚙️ Configurações</a>
             </nav>
         </aside>
@@ -25,7 +26,7 @@
                     🔍 <input type="text" id="inputPesquisa" placeholder="Digite o nome e aperte Enter..." onkeydown="verificarEnter(event)">
                 </div>
                 <div class="header-right">
-                    <div class="msg-icon" onclick="alert('Você tem 3 novas notificações!')">✉️ <span class="badge">3</span></div>
+                    <div class="msg-icon" onclick="navegar('mensagens')" style="cursor: pointer;">✉️ <span class="badge" id="msg-badge-top">0</span></div>
                     <div class="user-profile" onclick="navegar('config')">
                         <div class="avatar" id="user-photo">👤</div>
                         <span id="user-name-top">Ana Silva</span> ▾
@@ -33,8 +34,16 @@
                 </div>
             </header>
 
+            <!-- O JavaScript injetará a estrutura abaixo dentro desta div quando 'produtos' for ativo:
+            <div class="abas-container">
+                <button class="btn-aba aba-active" onclick="filtrarCategoria('Todos', this)">Todos</button>
+                <button class="btn-aba" onclick="filtrarCategoria('Eletrônicos', this)">Eletrônicos</button>
+                <button class="btn-aba" onclick="filtrarCategoria('Vestuário', this)">Vestuário</button>
+                <button class="btn-aba" onclick="filtrarCategoria('Alimentos', this)">Alimentos</button>
+            </div>
+            -->
             <div id="dynamic-view">
-                </div>
+            </div>
 
             <footer class="main-footer">
                 © 2026 Curso de Desenvolvimento WEB | <strong>Bella e Duda</strong>
