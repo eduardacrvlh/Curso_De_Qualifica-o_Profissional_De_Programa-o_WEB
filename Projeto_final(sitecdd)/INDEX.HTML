@@ -1,0 +1,418 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>São João Viva</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="grid"></div>
+<div class="bg-glow"></div>
+
+<div class="city-status-bar">
+
+<div class="status-item">
+🟢 Cidade tranquila
+</div>
+
+<div class="status-item">
+🚦 Fluxo moderado
+</div>
+
+<div class="status-item">
+🌤 Clima agradável
+</div>
+
+<div class="status-item">
+🛡 Segurança estável
+</div>
+
+</div>
+
+<!-- LOGIN -->
+
+<div class="login-screen" id="loginScreen">
+
+<div class="login-box">
+
+<h1>São João Viva</h1>
+
+<p>
+Cidade inteligente colaborativa.
+</p>
+
+<input
+type="text"
+id="username"
+placeholder="Nome de usuário"
+>
+
+<input
+type="text"
+id="userphoto"
+placeholder="Link da foto"
+>
+
+<button onclick="login()">
+Entrar
+</button>
+
+</div>
+
+</div>
+
+<!-- SITE -->
+
+<div id="mainSite" style="display:none;">
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+<div class="dot"></div>
+
+São João Viva
+
+</div>
+
+<div class="user-profile">
+
+<img id="navPhoto">
+
+<span id="navUser"></span>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<div class="badge">
+PRIMEIRA CIDADE HISTÓRICA INTELIGENTE
+</div>
+
+<h1>
+O coração digital de
+<span>São João del-Rei</span>
+</h1>
+
+<p>
+Sistema urbano colaborativo em tempo real.
+</p>
+
+<div class="buttons">
+
+<button
+class="primary"
+onclick="openExplorer()"
+>
+Explorar Plataforma
+</button>
+
+<button
+class="secondary"
+onclick="scrollToAlerts()"
+>
+Emitir alerta urbano
+</button>
+
+<button
+class="third-btn"
+onclick="openPrefeituraMode()"
+>
+Modo Prefeitura
+</button>
+
+</div>
+
+</div>
+
+<div class="hero-map">
+
+<div class="map-card">
+
+<div class="map-header">
+
+<h3>Mapa Vivo da Cidade</h3>
+
+<span>ONLINE</span>
+
+</div>
+
+<iframe
+src="https://www.google.com/maps?q=S%C3%A3o+Jo%C3%A3o+del+Rei+MG&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+</header>
+
+<!-- DASHBOARD -->
+
+<section class="dashboard">
+
+<div class="title">
+
+<span>CENTRO OPERACIONAL</span>
+
+<h2>Dashboard Inteligente</h2>
+
+</div>
+
+<div class="metrics">
+
+<div class="metric">
+<h3 id="flowMetric">87%</h3>
+<p>Fluxo urbano</p>
+</div>
+
+<div class="metric">
+<h3 id="alertMetric">126</h3>
+<p>Alertas urbanos</p>
+</div>
+
+<div class="metric">
+<h3 id="satisfactionMetric">91%</h3>
+<p>Satisfação</p>
+</div>
+
+<div class="metric">
+<h3 id="safetyMetric">72%</h3>
+<p>Segurança</p>
+</div>
+
+</div>
+
+<div class="dashboard-grid">
+
+<div class="chart-box">
+
+<h3>Índice Urbano Inteligente</h3>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+<div class="ai-box">
+
+<h3>IA Urbana</h3>
+
+<div id="chat"></div>
+
+<div class="chat-input">
+
+<input
+type="text"
+id="question"
+placeholder="Pergunte sobre trânsito, turismo, saúde..."
+>
+
+<button onclick="sendMessage()">
+Enviar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ALERTAS -->
+
+<section class="citizen-section" id="alertas">
+
+<div class="title">
+
+<span>PARTICIPAÇÃO CIDADÃ</span>
+
+<h2>Central Urbana Colaborativa</h2>
+
+</div>
+
+<div class="social-layout">
+
+<div class="create-post">
+
+<h3>Criar alerta</h3>
+
+<input
+type="text"
+id="bairro"
+placeholder="Bairro"
+>
+
+<select id="categoria">
+
+<option>Fluxo intenso</option>
+<option>Trânsito</option>
+<option>Segurança</option>
+<option>Saúde</option>
+<option>Mobilidade</option>
+<option>Evento</option>
+
+</select>
+
+<textarea
+id="descricao"
+placeholder="Descreva o ocorrido..."
+></textarea>
+
+<input
+type="text"
+id="imagem"
+placeholder="Link da imagem"
+>
+
+<button onclick="createPost()">
+Publicar alerta
+</button>
+
+</div>
+
+<div class="feed">
+
+<h3>Feed Urbano</h3>
+
+<div id="feed"></div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- EXPLORAR -->
+
+<div class="explorer-modal" id="explorerModal">
+
+<div class="explorer-content">
+
+<button
+class="close-modal"
+onclick="closeExplorer()"
+>
+✕
+</button>
+
+<h2>Central Viva</h2>
+
+<div class="explorer-grid">
+
+<div class="explorer-card">
+<h3>🚦 Mobilidade Viva</h3>
+<p>Fluxo intenso detectado no Centro Histórico.</p>
+</div>
+
+<div class="explorer-card">
+<h3>🛡 Segurança Inteligente</h3>
+<p>Movimentação urbana monitorada.</p>
+</div>
+
+<div class="explorer-card">
+<h3>🏥 Saúde Urbana</h3>
+<p>UPA Central operando normalmente.</p>
+</div>
+
+<div class="explorer-card">
+<h3>🌎 Termômetro da Cidade</h3>
+<p>Humor urbano positivo.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PREFEITURA -->
+
+<div class="prefeitura-modal" id="prefeituraModal">
+
+<div class="prefeitura-content">
+
+<button
+class="close-modal"
+onclick="closePrefeituraMode()"
+>
+✕
+</button>
+
+<h2>Painel Executivo</h2>
+
+<div class="pref-grid">
+
+<div class="pref-card">
+
+<h3>Demandas Urbanas</h3>
+
+<h1 id="urbanCounter">126</h1>
+
+</div>
+
+<div class="pref-card">
+
+<h3>Bairros Críticos</h3>
+
+<p>
+Centro • Matosinhos • Colônia
+</p>
+
+</div>
+
+<div class="pref-card">
+
+<h3>IA Analítica</h3>
+
+<p>
+Previsão de aumento de fluxo às 19h.
+</p>
+
+</div>
+
+<div class="pref-card">
+
+<h3>Eficiência Pública</h3>
+
+<h1>92%</h1>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
